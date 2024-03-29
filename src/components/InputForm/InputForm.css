@@ -1,0 +1,17 @@
+.inputForm .input {
+    padding: 8px 20px;
+    border-radius: 6px;
+    border: 1px solid #9ca3af;
+    transition: linear 0.2s;
+  }
+  .inputForm .input::-webkit-input-placeholder {
+    color: #9ca3af;
+  }
+  .inputForm .input::-moz-input-placeholder {
+    color: #9ca3af;
+  }
+  .inputForm .input:focus {
+    border-color: #1dc071;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  }

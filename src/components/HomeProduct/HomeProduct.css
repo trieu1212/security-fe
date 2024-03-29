@@ -1,0 +1,99 @@
+#wp-products {
+    padding-top:116px;
+    padding-bottom: 78px;
+    padding-left:134px;
+    padding-right:134px;
+}
+
+#wp-products h2 {
+    text-align: center;
+    margin-bottom: 76px;
+    font-size:32px;
+    color:#626a67;
+}
+
+
+#list-products {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#list-products .item {
+    width: 290px;
+    height: 380px;
+    background:#362f2f;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    z-index: 1;
+    border: 1px solid #362f2f;
+}
+
+#list-products .item .productImage {
+    display: block;
+    margin:0.3rem auto;
+    overflow: hidden;
+    width: 70%;
+    height: 60%;
+    object-fit: cover;
+    padding-right: 0.5rem;
+}
+
+
+#list-products .item .stars {
+
+    display: flex;
+    margin:10px auto;
+    width: 50%;
+}
+
+#list-products .item .name {
+    text-align: center;
+    color:#fff;
+    font-weight: bold;
+    margin-top:10px;
+}
+
+#list-products .item .desc {
+    text-align: center;
+    color:#626a67;
+}
+
+#list-products .item .priceProduct {
+    text-align: center;
+    color:orange;
+    font-weight: bold;
+    margin-top:0.7rem;
+    margin-bottom: 0.4rem;
+    font-size: 1.5rem;
+}
+
+
+.list-page {
+    width: 50%;
+    margin:0px auto;
+}
+
+.list-page {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-page .item {
+    margin:0px 15px;
+    width: 37px;
+    height: 37px;
+    background:#362f2f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list-page .item a {
+    color:#fff;
+    text-decoration: none;
+}

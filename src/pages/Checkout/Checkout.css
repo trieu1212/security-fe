@@ -1,0 +1,68 @@
+.checkoutContainer{
+    margin-top: 2rem;
+    background-color: #f4f4f4;
+    display: flex;
+    padding: 1rem 0.5rem;
+    justify-content: space-around;
+    gap:2rem;
+}
+.checkoutInfo{
+    flex:30%;
+    height: 30%;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    margin-left: 1rem;
+}
+
+.paymentMethod{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+.paymentMethod div button:hover{
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+    border-radius: 0.4rem;
+}
+.checkoutOrder{
+    flex: 60%;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+}
+.checkoutOrderitems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f4f4f4;
+}
+.checkoutOrderitems img{
+    width: 5rem;
+    border-radius: 1rem;
+}
+.confirmOrder{
+    padding-right: 6rem;
+    margin-top: 2rem;
+}
+.btnConfirmOrder{
+    padding: 0.5rem ;
+    color: white;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+}
+.btnConfirmOrder button{
+    padding: 0.5rem 1rem;
+    background-color: #45a049;
+}
+.btnConfirmOrder button:hover{
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+    border-radius: 0.4rem;
+}

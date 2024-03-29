@@ -1,0 +1,174 @@
+#box .box-left, #box .box-right{
+    padding-top: 3%;
+}
+#box .box-left {
+    width: 50%;
+    float: left;
+    padding-left: 10%;
+}
+
+#box .box-right {
+    width: 50%;
+    float: right;
+    padding-right: 10%;
+}
+#box .box-right h1{
+    padding-bottom: 2%;
+}
+#box .box-right p{
+    padding-bottom: 2%;
+}
+.productImage{
+    width: 70%;
+    height: 100%;
+    padding-right: 2rem;
+}
+.price{
+    color:#d0011b;
+    font-size: 3rem;
+}
+.price .priceTitle{
+    font-size: 1rem;
+    color: #000;
+    margin-right: 1rem;
+}
+.mainLayout{
+    display: flex;
+    flex-direction: column;
+}
+.counter {
+    display: flex;
+    align-items: center;
+    padding-bottom: 2%;
+  }
+  
+  .counter button {
+    padding: 0 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  .counter input {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ccc;
+  }
+  .counter button:hover {
+    background-color: #ddd;
+  }
+  
+  #count {
+    width: 50px;
+    text-align: center;
+  }
+  .add-to-cart {
+    background-color: #1d1a1a ;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .add-to-cart:hover {
+    background-color: orange;
+  }
+  
+  .add-to-cart i {
+    margin-right: 10px;
+  }
+
+.plus{
+    margin-left: 1rem;
+}
+.minus{
+    margin-right: 1rem;
+}
+.quantity{
+    width: 100%;
+}
+.btn{
+    border: none;
+}
+.comment{
+    display: flex;
+    flex-direction: column;
+}
+.addComment{
+    display: flex;
+    padding-top: 2%;
+    justify-content: start;
+    background-color: antiquewhite;
+    margin: 0 2rem;
+    padding: 2rem 2rem;
+    border-radius: 2rem;
+}
+.userIcon{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap:1.2rem;
+    padding-bottom: 1.5rem;
+}
+.userIcon h3{
+    font-size:1rem
+}
+.userComment{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: start;
+}
+.buttonComment{
+    float: inline-end;
+    background-color: #1d1a1a ;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.buttonComment:hover{
+    background-color: orange;
+}
+.viewComment{
+    margin: 1rem 2rem;
+    /* background-color:rgb(203, 201, 201); */
+    border-radius: 1rem;
+    box-shadow:  0 0 5px #000000;
+}
+.addComment{
+    box-shadow:  0 0 5px #000000;
+}
+textarea {
+    resize: vertical;
+    width: 100%; 
+  }
+.viewCommentField{
+    margin: 1rem 1rem;
+}
+.viewOneComment{
+    margin: 1rem 1rem;
+}
+.viewCommentInput{
+    display: flex;
+    justify-content: space-between;
+}
+.viewCommentInput button:hover{
+    background-color: #d0011b;
+    color:aliceblue;
+}

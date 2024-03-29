@@ -1,0 +1,68 @@
+#header {
+    width: 100%;
+    padding:0px 30px;
+    margin-top:33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+#menu {
+    list-style:none;
+    display: flex;
+    justify-content: center;
+}
+
+#menu .item {
+    margin:0px 25px;
+    /* margin-left: 1rem; */
+}
+
+#menu .item a {
+    color:#626A67;
+    text-decoration: none;
+}
+
+
+#actions {
+    display: flex;
+}
+
+
+.itemUser {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.itemCart {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.buttonLogin{
+    background-color: #F2F2F2;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.buttonLogin:hover {
+    background-color: #E0E0E0;
+}
+.buttonLogout{
+    background-color: #F2F2F2;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family:'Poppins', sans-serif;
+}
+.buttonLogout:hover {
+    background-color:rgb(228, 66, 12);
+}
