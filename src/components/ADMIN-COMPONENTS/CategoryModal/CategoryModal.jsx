@@ -17,7 +17,7 @@ function CategoryModal(props) {
     if (show && title === "Sửa danh mục sản phẩm") {
       const getCategory = async () => {
         const res = await axiosJWT.get(
-          `http://localhost:7000/api/category/${categoryId}/${user?.id}`,
+          `https://sercurity-sql-be.onrender.com/api/category/${categoryId}/${user?.id}`,
           {
             headers: {
               Authorization: `Bearer ${user?.accessToken}`,
@@ -37,7 +37,7 @@ function CategoryModal(props) {
         description: description,
       };
       const res = await axiosJWT.post(
-        `http://localhost:7000/api/category/create/${user?.id}`,
+        `https://sercurity-sql-be.onrender.com/api/category/create/${user?.id}`,
         data,
         {
           headers: {
@@ -50,7 +50,7 @@ function CategoryModal(props) {
     } else if (title === "Xóa danh mục sản phẩm") {
       try {
         const response = await axiosJWT.delete(
-          `http://localhost:7000/api/category/delete/${categoryId}/${user?.id}`,
+          `https://sercurity-sql-be.onrender.com/api/category/delete/${categoryId}/${user?.id}`,
           {
             headers: {
               Authorization: `Bearer ${user?.accessToken}`,
@@ -73,7 +73,7 @@ function CategoryModal(props) {
         description: description,
       };
       const res = await axiosJWT.put(
-        `http://localhost:7000/api/category/update/${categoryId}/${user?.id}`,
+        `https://sercurity-sql-be.onrender.com/api/category/update/${categoryId}/${user?.id}`,
         data,
         {
           headers: {

@@ -3,7 +3,7 @@ import { toast } from "react-toastify"
 export const createOrder = async(data,dispatch,navigate,axiosJWT,accessToken,userId)=>{
     dispatch(createOrderStart())
     try {
-        const res = await axiosJWT.post(`http://localhost:7000/api/order/create/${userId}`,data,{
+        const res = await axiosJWT.post(`https://sercurity-sql-be.onrender.com/api/order/create/${userId}`,data,{
             headers:{
                 Authorization: `Bearer ${accessToken}`
             }
@@ -20,7 +20,7 @@ export const createOrder = async(data,dispatch,navigate,axiosJWT,accessToken,use
 export const getUserOrder = async(dispatch,axiosJWT,accessToken,userId)=>{
     dispatch(getUserOrderStart())
     try {
-        const res = await axiosJWT.get(`http://localhost:7000/api/order/${userId}`,{
+        const res = await axiosJWT.get(`https://sercurity-sql-be.onrender.com/api/order/${userId}`,{
             headers:{
                 Authorization: `Bearer ${accessToken}`
             }

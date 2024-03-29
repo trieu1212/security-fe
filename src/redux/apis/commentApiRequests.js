@@ -21,7 +21,7 @@ export const addCommentByUser = async (
   dispatch(addProductCommentStart());
   try {
     const res = await axiosJWT.post(
-      `http://localhost:7000/api/comment/create/${userId}`,
+      `https://sercurity-sql-be.onrender.com/api/comment/create/${userId}`,
       data,
       {
         headers: {
@@ -38,7 +38,7 @@ export const addCommentByUser = async (
 export const getProductComments = async (dispatch, id) => {
   dispatch(getProductCommentStart());
   try {
-    const res = await axios.get(`http://localhost:7000/api/comment/${id}`);
+    const res = await axios.get(`https://sercurity-sql-be.onrender.com/api/comment/${id}`);
     dispatch(getProductCommentSuccess(res.data));
   } catch (error) {
     dispatch(getProductCommentError());
@@ -55,7 +55,7 @@ export const deleteCommentByUser = async (
   dispatch(deleteProductCommentStart());
   try {
     const res = await axiosJWT.delete(
-      `http://localhost:7000/api/comment/delete/${commentId}/${userId}`,
+      `https://sercurity-sql-be.onrender.com/api/comment/delete/${commentId}/${userId}`,
       {
         headers: {
           Authorization: `Bearer ${accessToken}`,

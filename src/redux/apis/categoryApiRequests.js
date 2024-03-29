@@ -4,7 +4,7 @@ import { getAllCategoryError, getAllCategoryStart, getAllCategorySuccess } from 
 export const getAllCategory = async(dispatch)=>{
     dispatch(getAllCategoryStart())
     try {
-        const res = await axios.get('http://localhost:7000/api/category')
+        const res = await axios.get('https://sercurity-sql-be.onrender.com/api/category')
         dispatch(getAllCategorySuccess(res.data))
     } catch (error) {
      dispatch(getAllCategoryError())   

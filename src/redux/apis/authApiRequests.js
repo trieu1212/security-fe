@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 export const loginUser =async (user,dispatch,navigate) => {
     dispatch(loginStart());
     try {
-        const res = await axios.post('http://localhost:7000/api/auth/login',user)
+        const res = await axios.post('https://sercurity-sql-be.onrender.com/api/auth/login',user)
         dispatch(loginSuccess(res.data))
         toast.success('Đăng nhập thành công')
         navigate('/')
@@ -19,7 +19,7 @@ export const loginUser =async (user,dispatch,navigate) => {
 export const registerUser = async (user,dispatch,navigate) =>{
     dispatch(registerStart())
     try {
-        const res = await axios.post('http://localhost:7000/api/auth/register',user)
+        const res = await axios.post('https://sercurity-sql-be.onrender.com/api/auth/register',user)
         dispatch(registerSuccess(res.data))
         toast.success('Đăng ký thành công')
         navigate('/login')
@@ -31,7 +31,7 @@ export const registerUser = async (user,dispatch,navigate) =>{
 
 export const logoutUser = async (axiosJWT,dispatch,navigate,accessToken,refreshToken) =>{
     try {
-        const res = await axiosJWT.post('http://localhost:7000/api/auth/logout',refreshToken,{
+        const res = await axiosJWT.post('https://sercurity-sql-be.onrender.com/api/auth/logout',refreshToken,{
             headers:{
                 Authorization: `Bearer ${accessToken}`
             }
