@@ -89,3 +89,33 @@
 .payment:hover {
     background-color: orange;
 }
+@media only screen and (max-width: 1024px) {
+    .cart-item {
+        width: calc(50% - 2rem); /* Hiển thị 2 sản phẩm trên mỗi hàng */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .cart-item {
+        width: calc(100% - 2rem); /* Hiển thị 1 sản phẩm trên mỗi hàng */
+    }
+}
+@media only screen and (max-width: 480px) {
+    .cart-item {
+        flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+        align-items: flex-start; /* Căn các phần tử về bên trái */
+    }
+    .item-image {
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        margin-bottom: 1rem; /* Khoảng cách giữa hình ảnh và các chi tiết sản phẩm */
+    }
+    .counter {
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+    }
+    .counter button, .counter input {
+        width: 30%; /* Điều chỉnh chiều rộng của nút và input */
+    }
+    .totalPrice {
+        margin-top: 1rem; /* Khoảng cách giữa tổng giá tiền và nút thanh toán */
+    }
+}

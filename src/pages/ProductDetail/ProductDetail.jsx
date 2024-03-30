@@ -216,6 +216,11 @@ const ProductDetail = () => {
                     ) : (
                       ""
                     )}
+                    {commentFetching && user && user.id === comment.userId ? (
+                      <p>Đang xóa...</p>
+                    ) : (
+                      ""
+                    )}
                   </p>
                 </div>
               ))}

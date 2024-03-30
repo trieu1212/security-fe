@@ -42,7 +42,7 @@ const ProductModal = (props) => {
                 toast.error('Vui lòng điền đầy đủ thông tin sản phẩm')
             }
             else{
-              await axiosJWT.post(`https://sercurity-sql-be.onrender.com/api/product/create/${user?.id}`,data,{
+              await axiosJWT.post(`http://localhost:7000/api/product/create/${user?.id}`,data,{
                 headers:{
                   Authorization: `Bearer ${user?.accessToken}`,
                 }
@@ -54,7 +54,7 @@ const ProductModal = (props) => {
         }
         else if(title === 'Xóa sản phẩm'){
           try {
-            await axiosJWT.delete(`https://sercurity-sql-be.onrender.com/api/product/delete/${productId}/${user?.id}`,{
+            await axiosJWT.delete(`http://localhost:7000/api/product/delete/${productId}/${user?.id}`,{
               headers:{
                 Authorization: `Bearer ${user?.accessToken}`,
               }
@@ -67,13 +67,13 @@ const ProductModal = (props) => {
         }
     }
     const getAllCategory = async()=>{
-        const res = await axios.get(`https://sercurity-sql-be.onrender.com/api/category`)
+        const res = await axios.get(`http://localhost:7000/api/category`)
         setCategory(res.data)
     }
     useEffect(()=>{
       if(show && title === 'Sửa sản phẩm'){
         const getProduct = async()=>{
-          const res = await axiosJWT.get(`https://sercurity-sql-be.onrender.com/api/product/${productId}/${user?.id}`,{
+          const res = await axiosJWT.get(`http://localhost:7000/api/product/${productId}/${user?.id}`,{
             headers:{
               Authorization: `Bearer ${user?.accessToken}`,
             }

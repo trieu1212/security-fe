@@ -39,20 +39,19 @@
 .counter {
     display: flex;
     align-items: center;
-    padding-bottom: 2%;
+    justify-content: space-between; /* Đảm bảo các phần tử con được căn cách nhau */
   }
   
   .counter button {
-    padding: 0 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    cursor: pointer;
+    padding: 0.5rem; /* Điều chỉnh padding cho các nút */
+    font-size: 1rem; /* Điều chỉnh kích thước chữ */
   }
+  
   .counter input {
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
-    border: 1px solid #ccc;
+    flex: 1; /* Phần tử input mở rộng ra để lấp đầy không gian trống */
+    text-align: center; /* Căn giữa nội dung trong input */
+    padding: 0.5rem; /* Điều chỉnh padding cho input */
+    font-size: 1rem; /* Điều chỉnh kích thước chữ */
   }
   .counter button:hover {
     background-color: #ddd;
@@ -147,7 +146,6 @@
 }
 .viewComment{
     margin: 1rem 2rem;
-    /* background-color:rgb(203, 201, 201); */
     border-radius: 1rem;
     box-shadow:  0 0 5px #000000;
 }
@@ -172,3 +170,58 @@ textarea {
     background-color: #d0011b;
     color:aliceblue;
 }
+
+@media only screen and (max-width: 600px) {
+    #box .box-left {
+      width: 100%; 
+      padding-left: 0; 
+      padding-right: 0; 
+    }
+  
+    #box .box-right {
+      width: 100%; 
+      padding-left: 0;
+      padding-right: 0;
+      margin-top: 1rem; 
+    }
+  
+    .productImage {
+      width: 100%; 
+      height: auto; 
+      padding-right: 0; 
+    }
+  
+    .mainLayout {
+      padding: 1rem; 
+    }
+  
+    .counter {
+        flex-direction: column; /* Đổi layout thành dạng cột */
+        align-items: center; /* Căn chỉnh các phần tử con vào giữa */
+      }
+    
+      .counter input {
+        width: 50%; /* Điều chỉnh chiều rộng của input để nó không bị quá rộng trên thiết bị di động */
+        margin-bottom: 1rem; /* Thêm margin dưới để tạo khoảng cách giữa input và nút */
+      }
+    
+      .counter button {
+        width: 50%; /* Điều chỉnh chiều rộng của nút để nó không bị quá rộng trên thiết bị di động */
+      }
+  
+    .add-to-cart {
+      width: 100%; 
+    }
+  
+    .addComment,
+    .userIcon,
+    .userComment {
+      width: 100%; 
+      padding: 1rem; 
+    }
+  
+    .userIcon,
+    .userComment {
+      flex-direction: column; 
+    }
+  }

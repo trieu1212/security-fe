@@ -11,7 +11,7 @@ const AdminProduct = () => {
   const [productId, setProductId] = React.useState(0);
   useEffect(()=>{
     const getAllProduct = async()=>{
-      const res = await axios.get(`https://sercurity-sql-be.onrender.com/api/product/?limit=2&page=${currentPage}`)
+      const res = await axios.get(`http://localhost:7000/api/product/?limit=2&page=${currentPage}`)
       setTotalPages(res.data.totalPages)
       setProducts(res.data.product)
     }

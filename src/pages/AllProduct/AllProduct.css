@@ -1,11 +1,10 @@
-.allProductContainer{
+/* .allProductContainer{
     display: flex;
     margin-top: 2rem;
     background-color: #f4f4f4;
 }
 .sideBar{
     width: 25%;
-    /* background-color: #f4f4f4; */
     padding: 20px;
     margin-right: 20px;
     flex-shrink: 0;
@@ -39,7 +38,6 @@
     height: 100%;
 }
 .productList{
-    /* flex: 1; */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
     flex-grow: 1;
@@ -86,6 +84,108 @@
     margin-bottom: 0.4rem;
 }
 .paginate{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+} */
+.allProductContainer {
+    display: flex;
+    flex-direction: column; /* Sắp xếp các thành phần theo cột trên các thiết bị nhỏ hơn */
+    margin-top: 2rem;
+    background-color: #f4f4f4;
+}
+
+.sideBar {
+    width: 100%; /* Đảm bảo sidebar chiếm toàn bộ chiều rộng trên thiết bị nhỏ hơn */
+    padding: 20px;
+    margin-bottom: 20px; /* Thêm margin dưới cho phần sidebar */
+    display: flex;
+}
+
+.sideBarContent {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Cho phép các danh mục sản phẩm chuyển hàng ngang khi không đủ không gian */
+    width: 100%;
+}
+
+.sideBar .title {
+    margin-bottom: 1rem;
+    font-size: 21px;
+}
+
+.categoryView {
+    border: none;
+    font-size: 17px;
+    text-decoration: none;
+    margin-right: 1rem; /* Thêm margin phía bên phải giữa các danh mục sản phẩm */
+    margin-bottom: 0.5rem; /* Thêm margin dưới cho mỗi danh mục sản phẩm */
+    padding: 0.5rem 1rem; /* Tăng padding để tăng kích thước của mỗi danh mục */
+    border-radius: 5px; /* Bo tròn viền cho mỗi danh mục sản phẩm */
+    transition: background-color 0.3s ease; /* Thêm hiệu ứng chuyển đổi màu nền */
+}
+.categoryView:hover {
+    background-color: #362f2f; /* Màu nền khi hover */
+    color: #fff; /* Đổi màu chữ khi hover */
+}
+
+.line {
+    margin-left: 1rem;
+    border-left: 2px solid #626a67;
+    height: 100%;
+    display: none; /* Ẩn đường dẫn giữa hai cột trên các thiết bị nhỏ hơn */
+}
+
+.productList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 20px; /* Khoảng cách giữa các sản phẩm */
+    padding: 1rem;
+}
+
+.productList .product {
+    width: 100%; /* Đảm bảo mỗi sản phẩm chiếm toàn bộ chiều rộng trên thiết bị nhỏ hơn */
+    height: auto; /* Chiều cao tự động điều chỉnh dựa trên nội dung */
+    background: #362f2f;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    z-index: 1;
+    border: 1px solid #362f2f;
+}
+
+.productList .product img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 0.2rem;
+    width: 70%;
+    height: auto; /* Chiều cao tự động điều chỉnh để giữ tỷ lệ hình ảnh */
+    object-fit: cover;
+    z-index: 2;
+}
+
+.productList .product .name {
+    text-align: center;
+    font-size: 19px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 19px;
+}
+
+.productList .product .desc {
+    text-align: center;
+    color: #626a67;
+}
+
+.productList .product .priceItem {
+    text-align: center;
+    color: orange;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0.7rem;
+    margin-bottom: 0.4rem;
+}
+
+.paginate {
     display: flex;
     justify-content: center;
     margin-top: 2rem;

@@ -14,6 +14,16 @@ const OrderHistory = () => {
     getUserOrder(dispatch, axiosJWT, user?.accessToken, user?.id);
   }, []);
   const order = useSelector((state) => state.order.currentOrder);
+  const hanldeJsonData = (data) => {
+    const parsedData = JSON.parse(data);
+    return (
+      <div>
+        <p>
+          {parsedData.address}, {parsedData.nation}
+        </p>
+      </div>
+    );
+  };
   const formatPrice = (price) => {
     return new Intl.NumberFormat("vi-VN", {
       style: "currency",
@@ -61,7 +71,7 @@ const OrderHistory = () => {
                         );
                       })}
                     </div>
-                    <div>Địa chỉ: {item.address.address}, {item.address.nation}</div>
+                    <div>Địa chỉ: {hanldeJsonData(item.address)}</div>
                     <div>Trạng thái: {item.status}!</div>
                     <div style={{ color:"red", fontSize:"22px" }}>{formatPrice(item.amount)}</div>
                   </div>

@@ -23,7 +23,7 @@ const UserModal = (props) => {
     const handleAction = async() =>{
         if(title === 'Xóa người dùng'){
             try {
-                const response = await axiosJWT.delete(`https://sercurity-sql-be.onrender.com/api/user/delete/${userId}`,{
+                const response = await axiosJWT.delete(`http://localhost:7000/api/user/delete/${userId}`,{
                 headers:{
                     Authorization: `Bearer ${user?.accessToken}`
                 }
@@ -48,7 +48,7 @@ const UserModal = (props) => {
                 isAdmin
             }
             try {
-                const res = await axiosJWT.put(`https://sercurity-sql-be.onrender.com/api/user/update/${userId}`,data,{
+                const res = await axiosJWT.put(`http://localhost:7000/api/user/update/${userId}`,data,{
                     headers:{
                         Authorization: `Bearer ${user?.accessToken}`
                     }
@@ -66,7 +66,7 @@ const UserModal = (props) => {
                 password,
                 isAdmin
             }
-             await axiosJWT.post(`https://sercurity-sql-be.onrender.com/api/user/create/${user?.id}`,data,{
+             await axiosJWT.post(`http://localhost:7000/api/user/create/${user?.id}`,data,{
                 headers:{
                     Authorization: `Bearer ${user?.accessToken}`
                 }
@@ -78,7 +78,7 @@ const UserModal = (props) => {
     useEffect(()=>{
         if(title === 'Sửa người dùng'){
             const getUser = async()=>{
-                const res = await axiosJWT.get(`https://sercurity-sql-be.onrender.com/api/user/${userId}/${user?.id}`,{
+                const res = await axiosJWT.get(`http://localhost:7000/api/user/${userId}/${user?.id}`,{
                     headers:{
                         Authorization: `Bearer ${user?.accessToken}`
                     }

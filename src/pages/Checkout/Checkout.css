@@ -1,4 +1,4 @@
-.checkoutContainer{
+/* .checkoutContainer{
     margin-top: 2rem;
     background-color: #f4f4f4;
     display: flex;
@@ -65,4 +65,99 @@
     background-color: orange;
     color: white;
     border-radius: 0.4rem;
+} */
+
+.checkoutContainer {
+    margin-top: 2rem;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column; 
+    padding: 1rem 0.5rem;
+}
+
+.checkoutInfo {
+    flex: 1; 
+    height: 100%;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    margin-left: 0; 
+}
+
+.paymentMethod {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.paymentMethod div button {
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+    border-radius: 0.4rem;
+    padding: 0.5rem 1rem;
+    border: none;
+}
+
+.checkoutOrder {
+    flex: 1; 
+    padding: 1rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    margin-top: 1rem; 
+}
+
+.checkoutOrderitems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f4f4f4;
+}
+.reviewImg {
+    width: 100px; /* Đặt chiều rộng của hình ảnh */
+    height: auto; /* Đảm bảo tỷ lệ khung hình */
+}
+
+.reviewImg img {
+    width: 100%; /* Đảm bảo hình ảnh lấp đầy toàn bộ không gian của div */
+    height: auto; /* Đảm bảo tỷ lệ khung hình */
+    border-radius: 1rem; /* Góc bo tròn cho hình ảnh */
+}
+.confirmOrder {
+    padding-right: 1rem; 
+    margin-top: 2rem;
+}
+
+.btnConfirmOrder button {
+    cursor: pointer;
+    background-color: #45a049;
+    color: white;
+    border-radius: 0.4rem;
+    padding: 0.5rem 1rem;
+    border: none;
+}
+.btnConfirmOrder button:hover {
+    background-color: red;
+    color: white;
+    border-radius: 0.4rem;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .checkoutContainer {
+        flex-direction: row; 
+    }
+
+    .checkoutInfo {
+        flex: 0.3; 
+        margin-left: 1rem;
+    }
+
+    .checkoutOrder {
+        flex: 0.7; 
+        margin-top: 0;
+    }
 }

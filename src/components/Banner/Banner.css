@@ -49,8 +49,6 @@
 #banner .box-right img {
     margin:0px 10px;
     animation :animation 3s infinite linear; 
-    max-width: 100%;
-    height: auto;
     border-radius: 1.2rem;
 }
 
@@ -83,14 +81,4 @@
     bottom:-40px;
     left:50%;
     transform:translateX(-50%);
-}
-/* Thêm media query để điều chỉnh cho màn hình nhỏ hơn */
-@media screen and (max-width: 768px) {
-    #banner {
-        padding: 10px;
-    }
-
-    #banner .box-left h2 {
-        font-size: 20px;
-    }
 }

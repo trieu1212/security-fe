@@ -13,7 +13,7 @@ const AdminUser = () => {
   let axiosJWT = createAxios(user, dispatch, loginSuccess, user?.refreshToken);
   useEffect(()=>{
       const getAllUser = async()=>{
-        const res = await axiosJWT.get(`https://sercurity-sql-be.onrender.com/api/user/${user?.id}`,{
+        const res = await axiosJWT.get(`http://localhost:7000/api/user/${user?.id}`,{
           headers:{
             Authorization: `Bearer ${user?.accessToken}`
           }

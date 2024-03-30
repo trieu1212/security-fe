@@ -49,7 +49,9 @@ const Cart = () => {
   const getTotalPrice = (cartItems) => {
     let total = 0;
     cartItems.map((item) => {
-      total += item.Product.price * item.quantity;
+      if (item.Product) { 
+        total += item.Product.price * item.quantity;
+      }
     });
     setTotalPrice(total);
   };

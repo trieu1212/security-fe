@@ -29,23 +29,6 @@ const HomeProduct = () => {
                         <>
                         <div class="item">
                             <Link to={`product/${product.id}`}><img className="productImage" src={product.image} alt="" /></Link>
-                            <div class="stars">
-                            <span>
-                                <img src={star} alt="" />
-                            </span>
-                            <span>
-                                <img src={star} alt="" />
-                            </span>
-                            <span>
-                                <img src={star} alt="" />
-                            </span>
-                            <span>
-                                <img src={star} alt="" />
-                            </span>
-                            <span>
-                                <img src={star} alt="" />
-                            </span>
-                            </div>
                             <div class="name">{product.title}</div>
                             <div class="desc">{product.description}</div>
                             <div class="priceProduct">{formatPrice(product.price)}</div>
@@ -56,20 +39,6 @@ const HomeProduct = () => {
                )     
             })}
         </ul>
-        {/* <div class="list-page">
-                <div class="item">
-                    <a href="">1</a>
-                </div>
-                <div class="item">
-                    <a href="">2</a>
-                </div>
-                <div class="item">
-                    <a href="">3</a>
-                </div>
-                <div class="item">
-                    <a href="">4</a>
-                </div>
-            </div> */}
       </div>
     </>
   );

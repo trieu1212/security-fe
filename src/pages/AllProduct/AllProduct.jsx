@@ -51,9 +51,9 @@ const AllProduct = () => {
       <div className="allProductContainer">
         <div className="sideBar">
           <div className="sideBarContent">
-            <label className="title" htmlFor="">
+            {/* <label className="title" htmlFor="">
               Danh mục sản phẩm
-            </label>
+            </label> */}
             <div className="categoryView">
               <p
                 style={{ cursor: "pointer", fontWeight: "bold" }}

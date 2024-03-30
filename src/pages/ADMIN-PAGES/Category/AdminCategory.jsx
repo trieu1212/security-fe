@@ -9,7 +9,7 @@ const AdminCategory = () => {
   const [title, setTitle] = React.useState('')
   const [categoryId, setCategoryId] = React.useState('')
   const getAllCategory = async() => {
-      const res = await axios.get('https://sercurity-sql-be.onrender.com/api/category')
+      const res = await axios.get('http://localhost:7000/api/category')
       setCategories(res.data)
   }
   const handleAdd = () => {
