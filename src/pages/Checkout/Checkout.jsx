@@ -14,6 +14,7 @@ const Checkout = () => {
   const [nation, setNation] = useState("");
   const [address, setAddress] = useState("");
   const [payment, setPayment] = useState("");
+  const [shipping, setShipping] = useState("Miễn phí vận chuyển");
   const user = useSelector((state) => state.auth.login?.currentUser);
   const cart = useSelector((state) => state.cart?.currentCart);
   let axiosJWT = createAxios(user, dispatch, loginSuccess, user?.refreshToken);
@@ -114,6 +115,7 @@ const Checkout = () => {
           </div>
           <div className="confirmOrder">
             <h2>Phương thức thanh toán: {payment}</h2>
+            <p>Chi phí vận chuyển: {shipping}</p>
             <p>Tổng tiền: <b style={{ fontSize:"22px" }}>{formatPrice(totalPrice)}</b></p>
             <div className="btnConfirmOrder">
               <button onClick={handleOrder}>Xác nhận đơn hàng</button>
