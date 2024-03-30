@@ -12,6 +12,8 @@ const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth.login?.currentUser);
+  const isFetching = useSelector((state) => state.auth.login?.isFetching);
+  console.log(isFetching);
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = {
@@ -46,7 +48,7 @@ const Login = () => {
               type="password"
             />
           </div>
-          <input type="submit" value="Đăng nhập" />
+          <input type="submit" value="Đăng nhập" disabled={isFetching? true : false}/>
         </form>
         <p>
           Chưa có tài khoản?{" "}
