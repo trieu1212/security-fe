@@ -16,6 +16,7 @@ import {
 } from "../../redux/apis/cartApiRequests";
 import "./ProductDetail.css";
 import { toast } from "react-toastify";
+import DOMPurify from "dompurify";
 const ProductDetail = () => {
   const [comment, setComment] = useState("");
   const { id } = useParams();
@@ -207,17 +208,13 @@ const ProductDetail = () => {
                   <p className="viewCommentInput">
                   <div>
                   <i class="fa-solid fa-user fa-xl"></i> <b>{comment.User?.username}</b> đã bình luận về sản phẩm:{" "}
-                    {comment.comment}
+                    <b dangerouslySetInnerHTML={{ __html:DOMPurify.sanitize(comment.comment,{FORBID_TAGS: ["a"]},{sanitize:true}) }}/>
+                    {/* <b dangerouslySetInnerHTML={{ __html:comment.comment }}/> */}
                   </div>
                     {user && user.id === comment.userId ? (
                       <button onClick={() => handleDeleteComment(comment.id)}>
                         Xóa
                       </button>
-                    ) : (
-                      ""
-                    )}
-                    {commentFetching && user && user.id === comment.userId ? (
-                      <p>Đang xóa...</p>
                     ) : (
                       ""
                     )}
